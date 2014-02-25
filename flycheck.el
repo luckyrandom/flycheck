@@ -506,7 +506,7 @@ Note that this hook does *not* run after each individual syntax
 checker in the syntax checker chain, but only after the *last
 checker*.
 
-This variable is a normal hook."
+This variable is a normal hook.  See Info node `(elisp)Hooks'."
   :group 'flycheck
   :type 'hook)
 
@@ -522,7 +522,7 @@ Note that this hook does *not* run before each individual syntax
 checker in the syntax checker chain, but only before the *first
 checker*.
 
-This variable is a normal hook."
+This variable is a normal hook.  See Info node `(elisp)Hooks'."
   :group 'flycheck
   :type 'hook
   :risky t)
@@ -537,7 +537,7 @@ this hook.
 You should use this hook to conduct additional cleanup actions
 when Flycheck failed.
 
-This variable is a normal hook."
+This variable is a normal hook.  See Info node `(elisp)Hooks.'"
   :group 'flycheck
   :type 'hook
   :risky t)
