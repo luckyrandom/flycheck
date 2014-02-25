@@ -641,6 +641,12 @@ This variable is a normal hook."
 (defvar-local flycheck-mode-line nil
   "The mode line lighter of variable `flycheck-mode'.")
 
+(defcustom flycheck-key-prefix "C-c !"
+  "Flyckeck prefix key for all the default hotkeys.  The value will be parsed by the function `kbd`."
+  :tag "Flyckeck Prefix Key."
+  :type '(string :size 10)
+  :group 'flycheck)
+
 (defvar flycheck-mode-map
   (let ((map (make-sparse-keymap))
         (pmap (make-sparse-keymap)))
@@ -657,7 +663,7 @@ This variable is a normal hook."
     (define-key pmap "?" 'flycheck-describe-checker)
     (define-key pmap "i" 'flycheck-info)
     (define-key pmap "V" 'flycheck-version)
-    (define-key map (kbd "C-c !") pmap)
+    (define-key map (kbd flycheck-key-prefix) pmap)
     map)
   "Keymap of `flycheck-mode'.")
 
